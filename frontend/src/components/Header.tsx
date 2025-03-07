@@ -1,16 +1,15 @@
 import React from 'react';
-import NavList from './NavList'
-import SearchBar from './SeachBar';
-import styles from './Header.module.css'
+import NavBar from './NavBar/NavBar';
+import styles from './Header.module.css';
 
 
 function Header(){
     return(
         <div>
-            <header className={styles.header}>
+            <header className="flex items-center justify-between px-4 py-4 lg:px-16 lg:py-6">
                 <nav className={styles.nav_header}> 
-                    <NavList />
-                    <SearchBar />
+                    <NavBar />
+                    
                 </nav>
             </header>
         </div>
