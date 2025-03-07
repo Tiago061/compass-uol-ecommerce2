@@ -10,13 +10,13 @@ export function Hero() {
   ];
 
   return (
-    <section className="bg-gray-100 px-4 md:px-20 pt-8 md:pt-20">
+    <section className="bg-bg-primary px-4 md:px-20 pt-8 md:pt-20">
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 space-y-6">
           <h2 className="font-integral-cf text-4xl md:text-6xl leading-none">
             find clothes that matches your style
           </h2>
-          <p className="text-gray-600 font-satoshi-regular md:w-4/5">
+          <p className="text-color-font font-satoshi-regular md:w-4/5">
             Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
           </p>
           <button className="w-full md:w-auto bg-black text-white px-14 py-4 rounded-full font-satoshi">

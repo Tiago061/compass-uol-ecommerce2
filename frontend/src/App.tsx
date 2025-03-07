@@ -65,7 +65,7 @@ const topSelling = [
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen m-0">
       <Header />
       <main>
         <Hero />

@@ -2,7 +2,7 @@ import { Mail } from 'lucide-react';
 
 export function Newsletter() {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-100 py-8">
+    <section className="bg-gradient-half  py-8">
       <div className="container mx-auto px-4">
         <div className="bg-black rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
           <h2 className="font-integral-cf text-3xl md:text-4xl text-white md:w-1/2 mb-6 md:mb-0">
