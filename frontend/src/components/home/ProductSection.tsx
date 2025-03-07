@@ -15,7 +15,7 @@ export function ProductSection({ title, products }: ProductSectionProps) {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="font-integral text-2xl md:text-4xl text-center mb-10 capitalize">
+        <h2 className="font-integral-cf text-2xl md:text-4xl text-center mb-10 capitalize">
           {title}
         </h2>
         

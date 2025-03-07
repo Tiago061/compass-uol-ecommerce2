@@ -10,7 +10,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="bg-gray-100 px-4 md:px-20 py-8 md:py-20">
+    <section className="bg-gray-100 px-4 md:px-20 pt-8 md:pt-20">
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 space-y-6">
           <h2 className="font-integral-cf text-4xl md:text-6xl leading-none">
@@ -27,14 +27,14 @@ export function Hero() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 {index > 0 && <div className="hidden md:block w-px h-12 bg-gray-300 mx-4" />}
-                <h3 className="font-satoshi text-2xl md:text-4xl">{stat.number}</h3>
+                <h3 className="font-satoshi font-bold text-2xl md:text-4xl">{stat.number}</h3>
                 <p className="text-gray-600 font-satoshi-regular text-sm md:text-base">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
         
-        <div className="md:w-1/2 relative mt-8 md:mt-0">
+        <div className="md:w-1/2 relative md:mt-0">
           <div className="absolute top-0 left-0 right-0 flex justify-around z-10">
             <StarsBlack className="h-11 w-11 relative top-40 right-10"/>
             <StarsBlack className="relative top-12 left-10"/>
