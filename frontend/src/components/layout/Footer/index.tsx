@@ -50,8 +50,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className='flex justify-between gap-24'>    
-            <div className='flex gap-24'>
+          <div className='flex flex-wrap justify-between md:flex-row w-full'>    
+            <div className='flex gap-36 md:flex-row'>
               {Object.entries(links).map(([title, items]) => (
                 <div key={title}>
                   <h3 className="font-satoshi text-sm uppercase tracking-wider mb-4">{title}</h3>
@@ -67,7 +67,7 @@ export function Footer() {
                 </div>
               ))}
             </div>
-            <div className='flex gap-24'>
+            <div className='flex gap-24 md:flex-row'>
               {Object.entries(listLinks).map(([title, items]) => (
                 <div key={title}>
                   <h3 className="text-bg-cards font-satoshi text-sm uppercase tracking-wider mb-4">{title}</h3>
