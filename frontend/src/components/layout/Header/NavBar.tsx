@@ -1,18 +1,21 @@
-import { Menu,  } from 'lucide-react';
-import { IconSearch, IconCar, IconPerfil,  } from '../../../assets/img/header';
+import { Menu } from 'lucide-react';
+import { IconSearch, IconCar, IconPerfil, DropDawn } from '../../../assets/img/header';
 
 
 
 
 export function Navbar() {
   return (
-    <header className="p-5">
+    <header className="p-5 lg:pl-16">
       <nav className="flex justify-between items-center">
-        <div className="flex gap-5 items-center lg-pl-16">
-          <Menu className="md:hidden w-6 h-6" />
+        <div className="flex gap-5 items-center">
+          <Menu className="md:hidden w-6 h-6 mt-1.5" />
           <h1 className="font-integral-cf text-2xl md:text-3xl">shop.co</h1>
-          <ul className="hidden md:flex gap-4 font-satoshi">
-            <li className="cursor-pointer ">Shop</li>
+          <ul className="hidden md:flex items-center gap-4 font-satoshi">
+            <div className='flex items-center'>
+                <li className="cursor-pointer ">Shop</li>
+                <li className='curso-pointer'><DropDawn className="w-6 h-2"/></li>
+            </div>
             <li className="cursor-pointer">On Sale</li>
             <li className="cursor-pointer">New Arrivals</li>
             <li className="cursor-pointer">Brands</li>
