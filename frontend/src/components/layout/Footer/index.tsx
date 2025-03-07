@@ -50,12 +50,12 @@ export function Footer() {
             </div>
           </div>
 
-          <div className='flex justify-between'>    
-            <div className=''>
+          <div className='flex justify-between gap-24'>    
+            <div className='flex gap-24'>
               {Object.entries(links).map(([title, items]) => (
                 <div key={title}>
                   <h3 className="font-satoshi text-sm uppercase tracking-wider mb-4">{title}</h3>
-                  <ul className="space-y-3 pb-7 ">
+                  <ul className="space-y-3 pb-7 w-full ">
                     {items.map((item) => (
                       <li key={item}>
                         <a href="#" className="text-gray-600 hover:text-black">
@@ -67,14 +67,14 @@ export function Footer() {
                 </div>
               ))}
             </div>
-            <div className='mb-4'>
+            <div className='flex gap-24'>
               {Object.entries(listLinks).map(([title, items]) => (
                 <div key={title}>
-                  <h3 className="font-satoshi text-sm uppercase tracking-wider mb-4">{title}</h3>
-                  <ul className="space-y-3 pb-7">
+                  <h3 className="text-bg-cards font-satoshi text-sm uppercase tracking-wider mb-4">{title}</h3>
+                  <ul className="space-y-3 pb-7 ">
                     {items.map((item) => (
-                      <li key={item}>
-                        <a href="#" className="text-gray-600 hover:text-black">
+                      <li key={item} className='w-full'>
+                        <a href="#" className="text-color-font hover:text-black">
                           {item}
                         </a>
                       </li>
@@ -89,7 +89,7 @@ export function Footer() {
         <hr className="#F0F0F0 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-          <p className="text-gray-600 font-satoshi-regular">Shop.co © 2000-2024, All Rights Reserved</p>
+          <p className="text-color-font font-satoshi-regular">Shop.co © 2000-2024, All Rights Reserved</p>
           <div className="flex gap-3">
             {payments.map((PaymentIcon, index) => (
               <div key={index} className="bg-white p-2 rounded">
