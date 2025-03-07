@@ -5,12 +5,12 @@ export function Newsletter() {
     <section className="bg-gradient-to-b from-white to-gray-100 py-8">
       <div className="container mx-auto px-4">
         <div className="bg-black rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
-          <h2 className="font-integral text-3xl md:text-4xl text-white md:w-1/2 mb-6 md:mb-0">
+          <h2 className="font-integral-cf text-3xl md:text-4xl text-white md:w-1/2 mb-6 md:mb-0">
             stay upto date about our latest offers
           </h2>
           
           <div className="w-full md:w-auto space-y-4">
-            <div className="flex items-center bg-white rounded-full px-4 py-3">
+            <div className="flex items-center bg-white rounded-full px-4 py-3 md:w-80">
               <Mail className="w-5 h-5 text-gray-500" />
               <input
                 type="email"
