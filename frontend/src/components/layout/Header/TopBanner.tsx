@@ -1,12 +1,15 @@
 import { X } from 'lucide-react';
+import { useState } from 'react';
 
 export function TopBanner() {
+  const [close, activeClose] = useState(false);
+
+
   return (
     <nav className="bg-black">
-      <div className="flex justify-between items-center">
-        <div className="flex-1" />
+      <section className="flex justify-center items-center">
         <div className="text-center flex-[2]">
-          <p className="text-white font-satoshi py-2 text-sm md:text-base">
+          <p className="text-white font-satoshi-regular py-2 text-sm md:text-base">
             Sign up and get 20% off to your first order.{' '}
             <span className="underline font-bold cursor-pointer">Sign Up Now</span>
           </p>
@@ -16,7 +19,7 @@ export function TopBanner() {
             <X className="w-4 h-4" />
           </button>
         </div>
-      </div>
+      </section>
     </nav>
   );
 }
