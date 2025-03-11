@@ -68,12 +68,8 @@ function App() {
     <div className="min-h-screen m-0">
       <Header />
       <main>
-        <Hero />
-        <Brands />
         <ProductSection title="new arrivals" products={newArrivals} />
-        <hr className="max-w-7xl mx-auto border-gray-200" />
         <ProductSection title="top selling" products={topSelling} />
-        <Newsletter />
       </main>
       <Footer />
     </div>
