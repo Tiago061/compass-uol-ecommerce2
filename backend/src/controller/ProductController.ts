@@ -18,9 +18,7 @@ export class ProductController {
             const { id } = req.params;
             const products = await productsRepository.findOneBy({id: Number(id)})
 
-            if(!products) {
-                return res.status(404).json({message: 'Product not found.'})
-            }
+            if(!products) return res.status(404).json({message: 'Product not found.'})  
             return res.status(200).json(products);
         }catch(error){
             console.error("Error searching for product by ID:", error)
@@ -30,7 +28,8 @@ export class ProductController {
 
     async create(req: Request, res: Response){
         try{
-            const newProduct =  productsRepository.create(req.body);
+            const { name, description, price, imageUrl } = req.body;
+            const newProduct =  productsRepository.create({ name, description, price, imageUrl });
             await productsRepository.save(newProduct)
             return res.status(201).json(newProduct)
         }catch(error){
@@ -42,13 +41,14 @@ export class ProductController {
     async update(req: Request, res: Response){
         try{
             const { id } = req.params
+            const { name, description, price, imageUrl } = req.body;
+            
             const products = await productsRepository.findOneBy({id: Number(id)})
-
             if(!products) {
                 return res.status(404).json({message: 'Product not found.'})
             }
 
-            productsRepository.merge(products, req.body)
+            Object.assign(products, { name, description, price, imageUrl });
             await productsRepository.save(products)
             return res.status(200).json(products)
 
@@ -63,9 +63,8 @@ export class ProductController {
             const { id } = req.params
             const products = await productsRepository.findOneBy({id: Number(id)})
 
-            if(!products) {
-                return res.status(404).json({message: 'Product not found.'})
-            }
+            if(!products) return res.status(404).json({message: 'Product not found.'})
+          
 
             await productsRepository.remove(products)
             return res.status(200).json({message: 'Product removed successfully'})

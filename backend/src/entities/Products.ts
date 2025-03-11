@@ -1,5 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
 import { ProductDetails } from "./ProductDetails";
+import { Review } from "./Review";
 
  
 @Entity("products")
@@ -18,10 +19,14 @@ export class Product {
   price: number;
 
   @Column({ type: "varchar", length: 500, nullable: true })
-  image: string;
+  imageUrl: string;
 
   @OneToMany(() => ProductDetails, (details) => details.product)
-  details: ProductDetails[];
+  details: ProductDetails[]; // indica que um produto pode ter vários detalhes
+
+  @OneToMany(() => Review, (reviews) => reviews.product)
+  reviews: Review[]; // indica que um produto pode ter várias avaliações
+
 
 }
  
