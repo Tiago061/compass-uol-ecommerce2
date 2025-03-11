@@ -1,28 +1,27 @@
-import { Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import { ProductDetails } from "./ProductDetails";
+
  
 @Entity("products")
-
 export class Product {
 
   @PrimaryGeneratedColumn()
-
   id: number;
  
-  @Column()
-
+  @Column({type: 'varchar', length: 255})
   name: string;
- 
-  @Column()
 
+  @Column({type: 'text', nullable: true})
   description: string;
  
-  @Column()
-
+  @Column({ type: "decimal", precision: 10, scale: 2 })
   price: number;
 
-  @Column()
-
+  @Column({ type: "varchar", length: 500, nullable: true })
   image: string;
+
+  @OneToMany(() => ProductDetails, (details) => details.product)
+  details: ProductDetails[];
 
 }
  
