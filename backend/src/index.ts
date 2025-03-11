@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { AppDataSource } from './connection'; 
 import productsRouter from './routes/productsRouter';
 import ProductsDetaisRouter from './routes/ProductDetailsRouter';
+import reviewRouter from './routes/ReviewRouter';
 
 
 
@@ -18,5 +19,6 @@ AppDataSource.initialize().then(() => {
 
     app.use(productsRouter)
     app.use(ProductsDetaisRouter)
+    app.use(reviewRouter)
 })
 
