@@ -8,9 +8,7 @@ const reviewController = new ReviewController
 
 reviewRouter.get("/reviews", reviewController.getAll);
 reviewRouter.get("/reviews/:productId", reviewController.getByProductId);
-reviewRouter.post("/reviews", reviewController.create);
-reviewRouter.put("/reviews/:id", reviewController.update);
-reviewRouter.delete("/products/:id", reviewController.delete);
+
 
 
 
