@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+
 
 export const Product = ({ products }: { products: GetProductsReponse[] }) => {
   console.log(products);

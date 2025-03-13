@@ -1,13 +1,12 @@
 "use client";
 
-import IconFilterMobile from "@public/svg/clothes/icon-filter-mobile";
-import IconCollapse from "@public/svg/clothes/icon-collapse";
-import { useFilterStore } from "@/store/sidebar-filter";
+
 import { useEffect, useState } from "react";
-import { getAllProducts } from "@/services/products";
-import Sidebar from "@/container/sidebar";
-import { Product } from "@/container/product";
-import NextPage from "@/container/next-page";
+import { getAllProducts } from "../../service/products";
+import { Sidebar } from "lucide-react";
+import { Product } from "../../container/product";
+import NextPage from "../../container/next-page";
+
 
 const CasualPage = () => {
   const { initialPage, finalLimit, minPrice, maxPrice, color, size } = useFilterStore();
