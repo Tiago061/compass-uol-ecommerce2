@@ -1,15 +1,13 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { useFilterStore } from "../store/sidebar-filter";
+
 import IconFilterSidebar from "@public/svg/clothes/icon-filter-sidebar";
 import IconCollapse from "@public/svg/clothes/icon-collapse";
 
 import { Check } from 'lucide-react';
 import IconCloseSideber from "@public/svg/clothes/icon-close-sideber";
-import { colors } from "@/store/sidebar-colors";
-import { Button } from "@/components/ui/button";
-import { sizes } from "@/store/sidebar-sizes";
+i
 
 interface SidebarProps {
   isEnableSidebar: boolean;
