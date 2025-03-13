@@ -1,8 +1,8 @@
 // File: /home/semnic/compass-uol-ecommerce2/frontend/src/app/(public)/page.tsx
-import * as entry from '../../../../src/app/(public)/page.js'
+import * as entry from '../../../../my-app/src/app/(public)/page.jsx'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/(public)/page.js')
+type TEntry = typeof import('../../../../my-app/src/app/(public)/page.jsx')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
