@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { AppDataSource } from './connection'; 
+import { AppDataSource } from './db/connection'; 
 import productsRouter from './routes/productsRouter';
 import ProductsDetaisRouter from './routes/ProductDetailsRouter';
 import reviewRouter from './routes/ReviewRouter';
