@@ -2,14 +2,14 @@
 
 
 import { useEffect, useState } from "react";
-import { getAllProducts } from "../../../../src/service/products";
+import { getAllProducts } from "../../service/products";
 
-import { Product } from "../../../../src/container/product";
-import NextPage from "../../../../src/container/next-page";
-import { useFilterStore } from "../../../../store/sidebar-filter";
+import { Product } from "../../container/product";
+import NextPage from "../../container/next-page";
+import { useFilterStore } from "../../store/sidebar-filter";
 import IconCollapse from "../../../public/svg/clothes/icon-collapse";
 import IconFilterMobile from "../../../public/svg/clothes/icon-filter-mobile";
-import Sidebar from "@/container/sidebar";
+import Sidebar from "../../container/sidebar";
 
 
 const CasualPage = () => {

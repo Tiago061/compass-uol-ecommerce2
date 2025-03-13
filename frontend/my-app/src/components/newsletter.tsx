@@ -1,4 +1,4 @@
-import { IconMessageNewsletter } from "../../my-app/public/svg/footer/index";
+import { IconMessageNewsletter } from "../../public/svg/footer/index";
 import Input from "./ui/input";
 import { Button } from "./ui/button";
 

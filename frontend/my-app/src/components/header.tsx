@@ -1,10 +1,10 @@
 import {
     IconNavtop, IconProfile, IconSearch,
     IconShopCar, IconSidebar
-  } from "../../my-app/public/svg/header/index";
+  } from "../../public/svg/header/index";
   
-  import { Button } from "@/components/ui/button";
-  import Input from "@/components/ui/input";
+  import { Button } from "./ui/button";
+  import Input from "./ui/input";
   
   
   
