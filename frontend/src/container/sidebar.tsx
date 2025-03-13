@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-import IconFilterSidebar from "@public/svg/clothes/icon-filter-sidebar";
-import IconCollapse from "@public/svg/clothes/icon-collapse";
+import IconFilterSidebar from "../../my-app/public/svg/clothes/icon-filter-sidebar";
+import IconCollapse from "../../my-app/public/svg/clothes/icon-collapse";
 
 import { Check } from 'lucide-react';
-import IconCloseSideber from "@public/svg/clothes/icon-close-sideber";
+import IconCloseSideber from "../../my-app/public/svg/clothes/icon-close-sideber";
 import { useFilterStore } from "../../store/sidebar-filter";
 import { colors } from "../../store/sidebar-colors";
 import { sizes } from "../../store/sidebar-sizes";

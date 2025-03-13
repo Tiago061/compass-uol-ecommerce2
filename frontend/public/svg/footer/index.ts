@@ -1,12 +1,12 @@
-import IconCardApple from '@public/svg/footer/icon-card-apple';
-import IconCardGooglePlay from '@public/svg/footer/icon-card-google-play';
-import IconCardMaster from '@public/svg/footer/icon-card-master';
-import IconCardPaypal from '@public/svg/footer/icon-card-paypal';
-import IconCardVisa from '@public/svg/footer/icon-card-visa';
-import IconFacebook from '@public/svg/footer/icon-facebook';
-import IconGithub from '@public/svg/footer/icon-github';
-import IconInstagram from '@public/svg/footer/icon-instagram';
-import IconTwitter from '@public/svg/footer/icon-twitter';
+import IconCardApple from './icon-card-apple';
+import IconCardGooglePlay from './icon-card-google-play';
+import IconCardMaster from './icon-card-master';
+import IconCardPaypal from './icon-card-paypal';
+import IconCardVisa from './icon-card-visa';
+import IconFacebook from './icon-facebook';
+import IconGithub from './icon-github';
+import IconInstagram from './icon-instagram';
+import IconTwitter from './icon-twitter';
 import IconMessageNewsletter from './icon-message-newsletter';
 
 

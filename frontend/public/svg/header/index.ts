@@ -1,8 +1,8 @@
-import IconNavtop from "@public/svg/header/icon-exit-nav-bar-top";
-import IconProfile from "@public/svg/header/icon-profile";
-import IconSearch from "@public/svg/header/icon-search";
-import IconShopCar from "@public/svg/header/icon-shop-car";
-import IconSidebar from "@public/svg/header/icon-sidebar";
+import IconNavtop from "./icon-exit-nav-bar-top";
+import IconProfile from "./icon-profile";
+import IconSearch from "./icon-search";
+import IconShopCar from "./icon-shop-car";
+import IconSidebar from "./icon-sidebar";
 
 export { 
   IconNavtop, IconProfile, IconSearch,
