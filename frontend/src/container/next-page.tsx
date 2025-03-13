@@ -1,6 +1,7 @@
 
 import { ArrowLeft } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { useFilterStore } from "../../store/sidebar-filter";
 
 interface NextPageProps {
   enableNextPage: boolean;
