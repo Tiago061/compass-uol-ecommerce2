@@ -1,5 +1,5 @@
 # Nome do Projeto  
-Ei, bem-vindo! Este é um projeto full-stack descomplicado que combina um frontend em Next.js com um backend em Express.js.
+Este é um projeto fullstack, frontend em Next.js com um backend em Express.js.
 
 ## Três Pilares do Projeto  
 Este repositório está organizado em dois grandes componentes:
@@ -22,7 +22,5 @@ Este repositório está organizado em dois grandes componentes:
 Quer explorar? Acesse a **página inicial** através [deste link](#) — lá você encontrará todos os redirecionamentos necessários para acessar o aplicativo e os endpoints da API. A partir daí, sinta-se à vontade para navegar e experimentar as funcionalidades disponíveis.  
 
 Se quiser contribuir ou rodar o projeto localmente, siga as instruções abaixo:  
-
-1. Clone o repositório:  
-   ```bash  
-   git clone https://github.com/tiago061/compass-ecommerce2.git  
+git clone https://github.com/tiago061/compass-ecommerce2.git  
+   
