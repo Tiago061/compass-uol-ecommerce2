@@ -10,7 +10,7 @@ interface Product {
     user_id: string | null;
   }
   
-  interface GetProductsReponse {
+  interface GetProductsResponse {
   
       products: Product
       product_variants: [ unknown[] ]
