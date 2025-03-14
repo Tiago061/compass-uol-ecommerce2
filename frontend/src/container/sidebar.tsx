@@ -8,8 +8,8 @@ import IconCollapse from "../../public/svg/clothes/icon-collapse";
 import { Check } from 'lucide-react';
 import IconCloseSideber from "../../public/svg/clothes/icon-close-sideber";
 import { useFilterStore } from "../store/sidebar-filter";
-import { colors } from "../store/sidebar-colors";
-import { sizes } from "../store/sidebar-sizes";
+import { colors } from "../../utils/sidebar-colors";
+import { sizes } from "../../utils/sidebar-sizes";
 import { Button } from "../components/ui/button";
 
 interface SidebarProps {
