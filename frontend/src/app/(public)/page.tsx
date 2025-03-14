@@ -6,10 +6,11 @@ import { getAllProducts } from "../../service/products";
 
 import { Product } from "../../container/product";
 import NextPage from "../../container/next-page";
-import { useFilterStore } from "../../store/sidebar-filter";
+
 import IconCollapse from "../../../public/svg/clothes/icon-collapse";
 import IconFilterMobile from "../../../public/svg/clothes/icon-filter-mobile";
 import Sidebar from "../../container/sidebar";
+import { useFilterStore } from "@/store/sidebar-filter-reducer";
 
 
 const CasualPage = () => {

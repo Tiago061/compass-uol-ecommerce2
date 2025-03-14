@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 
 import IconFilterSidebar from "../../public/svg/clothes/icon-filter-sidebar";
 import IconCollapse from "../../public/svg/clothes/icon-collapse";
-
 import { Check } from 'lucide-react';
 import IconCloseSideber from "../../public/svg/clothes/icon-close-sideber";
-import { useFilterStore } from "../store/sidebar-filter";
 import { colors } from "../../utils/sidebar-colors";
 import { sizes } from "../../utils/sidebar-sizes";
 import { Button } from "../components/ui/button";
+import { useFilterStore } from "@/store/sidebar-filter-reducer";
 
 interface SidebarProps {
   isEnableSidebar: boolean;
