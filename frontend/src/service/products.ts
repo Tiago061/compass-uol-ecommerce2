@@ -1,13 +1,6 @@
 import "dotenv/config";
 
-export interface GetAllProductsProps {
-  initial: number;
-  finalLimit: number;
-  color?: string;
-  size?: string;
-  minPrice?: number;
-  maxPrice?: number;
-}
+
 
 const URL_API_BACKEND = process.env.NEXT_PUBLIC_URL_BACKEND;
 

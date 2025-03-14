@@ -26,12 +26,15 @@ interface Review {
   comment: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface GetProductsResponse {
   products: Product;
   product_variants: ProductVariant[];
   reviews?: Review[]; 
 }
 
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface GetAllProductsProps {
   initial: number;
   finalLimit: number;
@@ -42,6 +45,7 @@ interface GetAllProductsProps {
 }
 
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type Color = {
   name: string
   value: string
@@ -60,6 +64,7 @@ interface FilterState {
 }
 
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface FilterActions {
   setValue: (field: keyof FilterState, value: string | number) => void;
   reset: () => void;

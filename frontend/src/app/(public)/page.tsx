@@ -4,9 +4,8 @@
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../../service/products";
 
-import { Product } from "../../container/product";
+import { Product } from "../../container/product/product";
 import NextPage from "../../container/next-page";
-
 import IconCollapse from "../../../public/svg/clothes/icon-collapse";
 import IconFilterMobile from "../../../public/svg/clothes/icon-filter-mobile";
 import Sidebar from "../../container/sidebar";
