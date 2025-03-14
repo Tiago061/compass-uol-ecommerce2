@@ -33,6 +33,7 @@ import {
     color: text("color").notNull(), 
     quantity: integer("quantity").notNull().default(0), 
   });
+  
   export const users = pgTable("users", {
     id: text("id").primaryKey(),
     name: text("name").notNull(),
@@ -61,10 +62,6 @@ import {
   export const insertProductVariantSchema = createInsertSchema(productVariants);
   export const selectProductVariantSchema = createSelectSchema(productVariants);
   
-
-  
-  export const insertOrderItemSchema = createInsertSchema(orderItems);
-  export const selectOrderItemSchema = createSelectSchema(orderItems);
   
   export const insertReviewSchema = createInsertSchema(reviews);
   export const selectReviewSchema = createSelectSchema(reviews);

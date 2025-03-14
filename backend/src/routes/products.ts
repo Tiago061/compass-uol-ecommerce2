@@ -65,16 +65,17 @@ productRoutes.get("/products", async (req: Request, res: Response) => {
       conditions.push(lt(products.price, maxPrice));
     }
 
-    let query = db.select().from(products)
-      .leftJoin(productVariants, eq(products.id, productVariants.product_id));
+    const baseQuery = db
+    .select()
+    .from(products)
+    .leftJoin(productVariants, eq(products.id, productVariants.product_id));
 
-    if (conditions.length > 0) {
-      query = query.where(and(...conditions));
-    }
+    const filteredQuery = conditions.length > 0
+  ? baseQuery.where(conditions.length === 1 ? conditions[0] : and(...conditions))
+  : baseQuery;
 
-    query = query.limit(quantityLimit).offset(quantityInitial);
+   const result = await filteredQuery.limit(quantityLimit).offset(quantityInitial);
 
-    const result = await query;
 
     if (!result.length) {
       return res.status(404).json({ message: "Nenhum produto encontrado" });
