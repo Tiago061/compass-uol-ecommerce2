@@ -7,7 +7,9 @@ if (!process.env.POSTGRES_URL)
   throw new Error("Missing POSTGRES_URL environment variable!");
 
 const queryClient = postgres(process.env.POSTGRES_URL, {
-  ssl: "require",
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 async function testConnection() {
