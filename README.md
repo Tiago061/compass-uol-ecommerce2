@@ -1,7 +1,7 @@
 # Nome do Projeto  
-Este é um projeto fullstack, frontend em Next.js com um backend em Express.js.
+Este é um projeto ecommerce fullstack, frontend em Next.js com um backend em Express.js.
 
-## Três Pilares do Projeto  
+## Sobre o Projeto  
 Este repositório está organizado em dois grandes componentes:
 
 - **Frontend**: Uma aplicação Next.js que utiliza renderização tanto do lado do servidor quanto do lado do cliente.  
