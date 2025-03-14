@@ -1,10 +1,7 @@
-import {
-  IconNavtop, IconProfile, IconSearch,
-  IconShopCar, IconSidebar
-} from "@public/svg/header/index";
-
-import { Button } from "@/components/ui/button";
-import Input from "@/components/ui/input";
+import React from "react";
+import { Button } from "./ui/button";
+import { IconNavtop, IconProfile, IconSearch, IconShopCar, IconSidebar } from "@public/svg/header";
+import Input from "./ui/input";
 
 
 
