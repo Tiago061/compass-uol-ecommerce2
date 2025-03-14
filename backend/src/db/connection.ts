@@ -1,6 +1,4 @@
 import "dotenv/config";
-
-
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import * as schema from "./schema";
@@ -9,9 +7,7 @@ if (!process.env.POSTGRES_URL)
   throw new Error("Missing POSTGRES_URL environment variable!");
 
 const queryClient = postgres(process.env.POSTGRES_URL, {
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ssl: "require",
 });
 
 async function testConnection() {

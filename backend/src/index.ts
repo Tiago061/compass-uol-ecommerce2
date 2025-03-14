@@ -1,25 +1,51 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import { AppDataSource } from './db/connection'; 
-import productsRouter from './routes/productsRouter';
-import ProductsDetaisRouter from './routes/ProductDetailsRouter';
-import reviewRouter from './routes/ReviewRouter';
+import "dotenv/config.js";
+
+import express, { NextFunction, Request, Response } from "express";
+import { createServer } from "http";
+import userRoutes from "./routes/users.js";
+import productRoutes from "./routes/products.js";
+import { errorHandler } from "./utils/error-handler.js";
+import { db } from "./db/connection.js";
+import cors from "cors"
+
+const app = express();
+
+if (!process.env.POSTGRES_URL)
+  throw new Error("Missing POSTGRES_URL environment variable!");
+
+app.use(express.json());
+const corsOptions = {
+  origin: `${process.env.POSTGRES_URL}`,
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type, Authorization",
+};
+app.use(cors(corsOptions));
 
 
+app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 
-const app = express()
-const port = process.env.PORT
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  errorHandler.handle(err, res);
+});
 
+const server = createServer(app);
 
+server.listen(process.env.API_PORT, () => {
+  console.log("Servidor iniciado na porta " + process.env.API_PORT);
+});
 
-AppDataSource.initialize().then(() => {
+process.on("unhandledRejection", (reason, promise) => {
+  console.error({ promise, reason }, "Unhandled Rejection");
+});
 
-    app.use(productsRouter)
-    app.use(ProductsDetaisRouter)
-    app.use(reviewRouter)
-    
-    app.listen(port, () =>{
-        console.log('Server connect')
-    })
-})
+process.on("uncaughtException", (error) => {
+  console.error({ error }, "Uncaught Exception");
 
+  server.close(() => {
+    console.info("Server closed");
+    process.exit(1);
+  });
+});
+
+export { server, db };
