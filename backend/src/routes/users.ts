@@ -19,7 +19,6 @@ userRoutes.post("/users", async (req: Request, res: Response, next: NextFunction
         id,
         email,
         name,
-        image,
       })
       .returning(); 
 
